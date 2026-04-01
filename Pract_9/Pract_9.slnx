@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="Arc/Arc.csproj" Id="a6a93791-11a3-4018-b106-9be7a3a81b27" />
+  <Project Path="BezierCurves/BezierCurves.csproj" Id="45da4628-2f4f-493a-b11d-cb341d5eb136" />
+  <Project Path="MatrixTransform/MatrixTransform.csproj" Id="9cafdd46-4087-4567-8c0d-0bf5831dbee3" />
+  <Project Path="Lines/Lines.csproj" Id="173e8a04-a0c1-4bf7-bf89-40f31a2bb778" />
+  <Project Path="RenderTransform_and_LayoutTransform/RenderTransform_and_LayoutTransform.csproj" Id="2f9b4e5c-0849-4e8b-8cba-0cda86889007" />
+  <Project Path="RotateTransform/RotateTransform.csproj" Id="ed97ae42-f8db-454f-bf5b-2fc2c092dcf4" />
+  <Project Path="ScaleTransform/ScaleTransform.csproj" Id="6b7855e2-949f-4c08-9a8d-00d1d03f7d09" />
+  <Project Path="SkewTransform/SkewTransform.csproj" Id="72138863-2ba9-415b-abd5-ffa2b419ee01" />
+  <Project Path="TranslateTransform/TranslateTransform.csproj" Id="ba7ed250-d29a-4d73-bc77-957b0d716abe" />
+</Solution>
