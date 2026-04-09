@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using Pract_11.Views;
-
-namespace Pract_11
+namespace Pract_11.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для NewUserPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NewUserPage : Page
     {
-        public MainWindow()
+        public NewUserPage()
         {
             InitializeComponent();
-            MainFrame.Navigate(new SignlnPage());
         }
     }
 }
