@@ -23,6 +23,42 @@
                 HorizontalAlignment="Left"
                 Width="70"/>
 
+        <TextBox Height="20"
+                 x:Name="poisk"
+                 Margin="90,20,0,20"
+                 HorizontalAlignment="Left"
+                 Width="100"/>
+
+        <Button Height="20"
+                x:Name="poisk_btn"
+                Margin="200,20,0,20"
+                Click="Button_Click_4"
+                Content="Поиск"
+                HorizontalAlignment="Left"
+                Width="70"/>
+
+        <TextBox Height="20"
+                 x:Name="filter"
+                 Margin="280,20,0,20"
+                 HorizontalAlignment="Left"
+                 Width="120"/>
+
+        <Button Height="20"
+                x:Name="filter_btn"
+                Margin="410,20,0,20"
+                Click="filter_btn_Click"
+                Content="Фильтрация"
+                HorizontalAlignment="Left"
+                Width="70"/>
+        
+        <Button Height="20"
+                x:Name="sortirovka_btn"
+                Margin="500,20,0,20"
+                Click="sortirovka_btn_Click"
+                Content="Сортировка"
+                HorizontalAlignment="Left"
+                Width="70"/>
+
         <DataGrid Grid.Row="1"
                   AutoGenerateColumns="False"
                   x:Name="UsersGrid">

@@ -54,5 +54,47 @@ namespace Pract_11.Views
         {
             UsersGrid.ItemsSource = AppData.db1.User.ToList();
         }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var DelUs = AppData.db1.User.Where(c => c.Login.Contains(poisk.Text)).ToList();
+            if (DelUs.Count == 0)
+            {
+                MessageBox.Show("Пользователя с таким логином нет в базе");
+                UsersGrid.ItemsSource = AppData.db1.User.ToList();
+            }
+            else
+            {
+                UsersGrid.ItemsSource = DelUs;
+            }
+        }
+
+        private void filter_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var DelUs = AppData.db1.User.Where(c => c.Password == filter.Text).ToList();
+            if (DelUs.Count == 0)
+            {
+                MessageBox.Show("Пользователя с таким паролем нет в базе");
+                UsersGrid.ItemsSource = AppData.db1.User.ToList();
+            }
+            else
+            {
+                UsersGrid.ItemsSource = DelUs;
+            }
+        }
+
+        private void sortirovka_btn_Click(object sender, RoutedEventArgs e)
+        {
+            var DelUs = AppData.db1.User.OrderByDescending(c => c.Login).ToList();
+            if (DelUs.Count == 0)
+            {
+                MessageBox.Show("Пользователя ///");
+                UsersGrid.ItemsSource = AppData.db1.User.ToList();
+            }
+            else
+            {
+                UsersGrid.ItemsSource = DelUs;
+            }
+        }
     }
 }
