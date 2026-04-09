@@ -8,7 +8,23 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="NewUserPage">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    MinWidth="200">
+            <TextBlock Text="Логин"/>
+            <TextBox x:Name="LoginTxb"/>
+
+            <TextBlock Text="Пароль"/>
+            <TextBox x:Name="Password_Txb"/>
+
+            <TextBlock Text="Роль:"
+                       Margin="0 5 0 0"/>
+            <ComboBox x:Name="CmbRole"
+                      Margin="0 0 0 5"
+                      DisplayMemberPath="Title"/>
+            <Button Content="Сохранить"
+                    Click="Button_Click_1"/>
+        </StackPanel>
     </Grid>
 </Page>

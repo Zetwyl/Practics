@@ -25,7 +25,7 @@ namespace Pract_11.ADO
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Role> Role { get; set; }
         public DbSet<User> User { get; set; }
     }
 }

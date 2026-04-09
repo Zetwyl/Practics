@@ -6,9 +6,46 @@
       xmlns:local="clr-namespace:Pract_11.Views"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
+      Loaded="Page_Loaded"
       Title="DataPage">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Button Height="20"
+                Margin="10,20,0,20"
+                Click="Button_Click"
+                Content="Назад"
+                HorizontalAlignment="Left"
+                Width="70"/>
+
+        <DataGrid Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  x:Name="UsersGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="*" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Логин" Width="*" Binding="{Binding Login}"/>
+                <DataGridTextColumn Header="Пароль" Width="*" Binding="{Binding Password}"/>
+                <DataGridTextColumn Header="Роль" Width="*" Binding="{Binding Role.Title}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+            <Button Height="24"
+                    Click="Button_Click_1"
+                    Content="Добавить"
+                    Width="150"/>
+            <Button Height="24"
+                    Click="Button_Click_2"
+                    Content="Удалить"
+                    Width="150"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pract_11.ADO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,35 @@ namespace Pract_11.Views
         public DataPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new NewUserPage());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите удалить пользователя", "Уведомление", MessageBoxButton.YesNo,
+                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                var CurrentUser = UsersGrid.SelectedItem as User;
+                AppData.db1.User.Remove(CurrentUser);
+                AppData.db1.SaveChanges();
+
+                UsersGrid.ItemsSource = AppData.db1.User.ToList();
+                MessageBox.Show("success");
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            UsersGrid.ItemsSource = AppData.db1.User.ToList();
         }
     }
 }
