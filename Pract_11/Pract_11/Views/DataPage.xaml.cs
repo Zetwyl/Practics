@@ -50,6 +50,17 @@ namespace Pract_11.Views
             }
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var CurrentUser = UsersGrid.SelectedItem as User;
+            if (CurrentUser == null)
+            {
+                MessageBox.Show("Выберите пользователя для изменения");
+                return;
+            }
+            NavigationService.Navigate(new EditUserPage(CurrentUser));
+        }
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             UsersGrid.ItemsSource = AppData.db1.User.ToList();

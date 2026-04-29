@@ -79,6 +79,10 @@
                     Content="Добавить"
                     Width="150"/>
             <Button Height="24"
+                    Click="Button_Click_3"
+                    Content="Измменить"
+                    Width="150"/>
+            <Button Height="24"
                     Click="Button_Click_2"
                     Content="Удалить"
                     Width="150"/>
